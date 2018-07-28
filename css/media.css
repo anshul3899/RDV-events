@@ -328,7 +328,7 @@
        height:auto !important; 
     }
 	.artist_grid figure figcaption > a {
-        pointer-events: none;
+        
     }
     /* Gallery */
    .gallery-section.active #galleryHolder {
