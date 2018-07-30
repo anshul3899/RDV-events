@@ -467,6 +467,35 @@ $(window).on('load', function(e) {
     }, 1500);
 });
 
+document.getElementById("sidenav").style.width = "0";
 
+function openNav() {
+    document.getElementById("sidenav").style.width = "100%";
+}
+
+// document.getElementById("mySidenav").toggleClass('mySidenav');
+
+$(document).ready(function(){
+    $('#nav-icon1,#nav-icon2,#nav-icon3,#nav-icon4').click(function(){
+        $(this).toggleClass('open');
+        
+    });
+
+      $('.open').click(function(){
+        document.getElementById("mySidenav").style.width = "0 !important";
+      });
+
+    });      
 
  
+
+function openNav() {
+    document.getElementById("sidenav").style.width = "100%";
+}
+
+// function closeNav() {
+//     document.getElementById("mySidenav").style.width = "0";
+// }
+
+
+
