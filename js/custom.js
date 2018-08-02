@@ -467,11 +467,24 @@ $(window).on('load', function(e) {
     }, 1500);
 });
 
-document.getElementById("sidenav").style.width = "0";
 
-function openNav() {
-    document.getElementById("sidenav").style.width = "100%";
-}
+var eventBtn = $('#nav-icon3');
+var sidenav  = $('#sidenav');
+var artistBack = $('#artist_back');
+
+eventBtn.on('click',function(){
+    sidenav.toggleClass('active');
+if(artistBack.hasClass('active'))
+	{artistBack.removeClass('active');
+	}
+	else{
+	artistBack.addClass('active');
+	}
+});
+
+
+
+
 
 // document.getElementById("mySidenav").toggleClass('mySidenav');
 
@@ -492,6 +505,7 @@ $(document).ready(function(){
 function openNav() {
     document.getElementById("sidenav").style.width = "100%";
 }
+
 
 // function closeNav() {
 //     document.getElementById("mySidenav").style.width = "0";

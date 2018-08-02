@@ -20,7 +20,13 @@ Version:    1.1
 /*
 General
 --------------------------------------------------------*/
- 
+ @media screen and (max-width: 612px)
+ {
+ .l--slide{
+    display: none !important;
+    z-index: -2000;
+ }
+}
 .arti-ans:hover{
 
 
@@ -724,10 +730,8 @@ Artist Lineup
 .artist-slide-name:nth-child(odd){
  background-color: #bf1d1b;
 }
-
-
 .artist-slide-name h1 {
-    font-size: 30px;
+    font-size: 1.55em;
     
     display: inline-block;
     color: #051122;
@@ -736,7 +740,7 @@ Artist Lineup
 .artist-slide-name::before,
 .artist-slide-details:before,
 .artist-slide-social:before {
-    content: "";
+    
     display: inline-block;
     height: 100%;
     vertical-align: middle;
@@ -748,6 +752,7 @@ Artist Lineup
 }
 .artist-slide-details,
 .artist-slide-name {
+    height:14.3vh;
     padding-right: 6.25vw;
 }
 .artist-slide-social {
@@ -762,13 +767,11 @@ Artist Lineup
 .artist-slide-prev ,
 .artist-slide-name2,
 .artist-slide-name3{
-    height: 12.5%;
-    position: relative;
-    max-width: 300px;
-    float: right;
-        
-    margin-left: calc(100% - var(--max-width-v));
-    padding-left: 55px;
+	position: relative;
+	max-width: 300px;
+	float: right;
+	margin-left: calc(100% - var(--max-width-v));
+	padding-left: 55px;
 }
 @media(max-width: 400px){
 
@@ -820,15 +823,19 @@ Artist Lineup
 
 #sidenav {
     height: 100%;
-    width: 0;
-    position: fixed;
+    width: 0%;
+    position: absolute;
     z-index: 1;
     top: 0;
     left: 0;
-    background-color: blue;
+    background-color: #00f3;
     overflow-x: hidden;
-    transition: 0.5s;
+    transition: all 0.5s ease;
     padding-top: 60px;
+}
+#sidenav.active{
+    width: 100%;
+    transition: all 0.5s ease;
 }
 
 .mySidenav{
@@ -881,6 +888,16 @@ Artist Lineup
   transition: .25s ease-in-out;
 }
 
+figure {
+    margin:0 0 0rem ;
+}
+
+@media(min-width: 600px)
+{
+    #nav-icon3{
+        display: none;
+    }
+}
 
 /* Icon 3 */
 
@@ -964,7 +981,7 @@ Artist Lineup
 }
 
 .artist-slide-name h1 {
-    font-size: 30px !important;
+    font-size: 23.5px !important;
     padding-top: 0 !important;
     margin-top: 0 !important;
     padding: 0 !important;
@@ -975,21 +992,17 @@ Artist Lineup
 }
 }
 .arti-ans{
-    height: 12.5%;
-    position: relative;
-    /*max-width: 300px;*/
-    float: right;
-      
-    margin-left: calc(100% - var(--max-width-v));
-    
-   /*width: 25vw;*/
-    cursor: pointer;
-
-    width: 40vw;
-    -webkit-transition: all 0.3s;
-    -moz-transition: all 0.3s;
-    -o-transition: all 0.3s;
-    transition: all 0.3s;
+	position: relative;
+	/*max-width: 300px;*/
+	float: right;
+	margin-left: calc(100% - var(--max-width-v));
+	/*width: 25vw;*/
+	cursor: pointer;
+	width: 40vw;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	-o-transition: all 0.3s;
+	transition: all 0.3s;
 
 }
 
