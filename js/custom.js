@@ -468,6 +468,7 @@ $(window).on('load', function(e) {
 });
 
 
+
 var eventBtn = $('#nav-icon3');
 var sidenav  = $('#sidenav');
 var artistBack = $('#artist_back');
@@ -483,8 +484,22 @@ if(artistBack.hasClass('active'))
 });
 
 
+for(var i=1;i<=14;i++)
+{
+    $("#ar"+i).on("click",function(){
+        console.log("all elements hidden");
+        for(var j=1;j<=14;j++){
+            $("#ar"+j).addClass('hide');
+        }
+    });
+}
 
 
+artistBack.on('click',function(){
+for(i=1;i<=14;i++)
+{
+    $('#ar'+i).removeClass('hide');
+}});
 
 // document.getElementById("mySidenav").toggleClass('mySidenav');
 
