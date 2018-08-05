@@ -175,7 +175,7 @@ Version:    1.1
 	
 
     if (parallaxHome.length) {
-	 $('#background').animatedBG({}); //Initialize home background colour animation for home
+	$('#background').animatedBG({}); //Initialize home background colour animation for home
     var scene = document.getElementById('scene');
     var parallax = new Parallax(scene);
     homeResize();
@@ -437,7 +437,7 @@ Version:    1.1
                     $.fn.fullpage.setAllowScrolling(false);
 
 
-            }, 1000, "some unique string");
+            }, 0, "some unique string");
 			if (parallaxHome.length) {
             homeResize();
 			}

@@ -892,7 +892,7 @@ figure {
     margin:0 0 0rem ;
 }
 
-@media(min-width: 600px)
+@media(min-width: 612px)
 {
     #nav-icon3{
         display: none;
